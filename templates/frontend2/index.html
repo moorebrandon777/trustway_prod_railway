@@ -1,0 +1,285 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- hero start -->
+<section id="hero">
+    <div class="container hero-wrapper">
+        <div class="row">
+            <div class="col-md-6 hero-text mb-md-0 mb-5">
+                <h1>Find The Best Service Suitable For Your Needs.</h1>
+                <p>Open an account with us to enjoy all the benefits we have to offer.</p>
+                <a href="{% url 'frontend:register' %}" class="btn custom-hero-btn">Get Started</a>
+            </div>
+            <div class="col-md-6 hero-form">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-9">
+
+                        <div class="card">
+                            
+                            <div class="card-body my-4">
+                                <h3 class="card-title text-center mb-4">LOGIN</h3>
+                                {% if messages %}
+                                    {% for message in messages %}
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        {{message}}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                    {% endfor %}
+                                {% endif %}
+
+                                <form action="{% url 'frontend:login_index_form' %}" method="POST" id="login-index-form">
+                                    {% csrf_token %}
+
+                                    <div class="input-group mb-4">
+                                        <span class="input-group-text" id="email"><i class="fa-solid fa-envelope"></i></span>
+                                        <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Enter Email" required>
+                                    </div>
+                                    <div class="input-group mb-4">
+                                        <span class="input-group-text" id="password">
+                                            <i class="fa-solid fa-lock"></i>
+                                        </span>
+                                        <input type="password" class="form-control" id="password" name="password" aria-describedby="password" placeholder="Enter Password" required>
+                                    </div>
+
+                                    <button type="submit" class="btn form-custom-btn w-100 my-3">
+                                        <span id="login-form-text">Login</span>
+                                        <div class="spinner-border spinner-border-sm text-light d-none" role="status" id="login-form-spinner">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </button>
+
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- hero end -->
+
+<!-- about us start -->
+<section id="about-us">
+    <div class="container about-wrapper">
+        <div class="row">
+            <div class="col-md-7 about-left">
+                <h2>Thousands Of Customers Trust Our Services</h2>
+                <p>We have a clear plan to improve our operational performance, and improve total service returns. To do so, over the next ten years we will make our services Simpler, Better and More balanced.</p>
+
+                <div class="row mt-5 pt-4">
+                    <div class="col-md-6">
+                        <h3>Our Vision</h3>
+                        <p class="vis-mis">Our vision is to be the a centred leader in global finance. We are with comprehensive world consumer, corporate, wealth and franchises, a leading offshore service and a strong, specialist consumer choice.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Our Mission</h3>
+                        <p class="vis-mis">To analyse a broad range of financial and non-financial measures to make sure our strategy is working. Ultimately, the experience of our customers is the key indicator as to whether we are succeeding.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-5">
+                <img src="{% static 'frontend2//assets/images/about-1.jpg' %}" alt="" class="img-fluid about-img">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about end here -->
+
+<!-- all biz for you -->
+<section id="all-biz">
+    <div class="allbiz-overlay"></div>
+    <div class="all-biz-wrapper">
+        <div class="allbiz-img-container">
+            <img src="{% static 'frontend2/assets/images/all-biz1.jpg' %}" alt="" class="img-fluid">
+            <div class="allbiz-text">
+                <h3><span>01.</span> Personal Service</h3>
+                <p>Find out about services that are suitable for your personal needs.</p>
+                <h6 style="border-bottom: 2px solid rgb(9, 78, 9); width: 80px; padding-bottom: 10px;">View More</h6>
+            </div>
+        </div>
+        <div class="allbiz-img-container">
+            <img src="{% static 'frontend2/assets/images/all-biz4.jpg' %}" alt="" class="img-fluid">
+            <div class="allbiz-text">
+                <h3><span>02.</span> Business Service</h3>
+                <p>Find out about services that are suitable for your business.</p>
+                <h6 style="border-bottom: 2px solid rgb(9, 78, 9); width: 80px; padding-bottom: 10px;">View More</h6>
+            </div>
+        </div>
+        <div class="allbiz-img-container">
+            <img src="{% static 'frontend2/assets/images/all-biz2.jpg' %}" alt="" class="img-fluid">
+            <div class="allbiz-text">
+                <h3><span>03.</span> Education</h3>
+                <p>Your educational plans will be supported with our service.</p>
+                <h6 style="border-bottom: 2px solid rgb(9, 78, 9); width: 80px; padding-bottom: 10px;">View More</h6>
+            </div>
+        </div>
+        <div class="allbiz-img-container">
+            <img src="{% static 'frontend2/assets/images/all-biz3.jpg' %}" alt="" class="img-fluid">
+            <div class="allbiz-text">
+                <h3><span>04.</span> Commercial</h3>
+                <p>We have lots of services for commercial Purposes.</p>
+                <h6 style="border-bottom: 2px solid rgb(9, 78, 9); width: 80px; padding-bottom: 10px;">View More</h6>
+            </div>
+        </div>
+        <div class="allbiz-img-container">
+            <img src="{% static 'frontend2/assets/images/all-biz5.jpg' %}" alt="" class="img-fluid">
+            <div class="allbiz-text">
+                <h3><span>02.</span> Customer Service</h3>
+                <p>We are always on stand by to answer any questions you have.</p>
+                <h6 style="border-bottom: 2px solid rgb(9, 78, 9); width: 80px; padding-bottom: 10px;">View More</h6>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- allbiz end -->
+
+<!-- services start -->
+<section id="services" class="my-5">
+    <div class="container">
+        <h2 class="text-center py-3 mb-4">Why People Choose Us</h2>
+        <p class="text-center mb-5">Our five Values - Respect, Integrity, Service, Excellence and Stewardship - <br>are our moral compass; the fundamentals of who we are and what we believe is right</p>
+        <div class="row gy-5">
+            <div class="col-md-4 ">
+                <div class="service-wrapper">
+                    <i class="fa-solid fa-clock"></i>
+                    <div class="card shadow text-center py-5 px-4 h-100">
+                        <h3 class="mt-4">Quick and Easy</h3>
+                        <p>We make our service very easy for our customers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="service-wrapper">
+                    <i class="fa-solid fa-unlock-keyhole"></i>
+                    <div class="card shadow text-center py-5 px-4 h-100">
+                        <h3 class="mt-4">Absolute Security</h3>
+                        <p>We have a lot of security plans to keep your operation with us secured.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="service-wrapper">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <div class="card shadow text-center py-5 px-4">
+                        <h3 class="mt-4">Quick Approval</h3>
+                        <p>Our approval time is very quick get started today.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="service-wrapper">
+                    <i class="fa-solid fa-user-lock"></i>
+                    <div class="card shadow text-center py-5 px-4">
+                        <h3 class="mt-4">Personal Security</h3>
+                        <p>We take our customer's security very seriously.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="service-wrapper">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <div class="card shadow text-center py-5 px-4">
+                        <h3 class="mt-4">Low Rate</h3>
+                        <p>Our charges are very reasonable for your services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="service-wrapper">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="card shadow text-center py-5 px-4">
+                        <h3 class="mt-4">Quick Response</h3>
+                        <p>We are always ready to attend to you and answer your questions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- services end -->
+
+<!-- contact start -->
+<section id="contact" class="py-4 my-5">
+    <div class="container my-3 contact-wrapper">
+        <div class="row gx-5 gy-3">
+            <div class="col-md-6">
+                <h2 class="mb-4">Request A Call Back</h2>
+                <p class="mb-5">If you have a question, or if you are having any sort of problem with our services, please don't hesitate to reach out to us with the contact form or you can send us email through our customer care email below.</p>
+                <h4>Customer Service: <span class="small">contact@trustwayonlietrans.com</span></h4>
+            </div>
+            <div class="col-md-6">
+                <div class="form-wrapper">
+                    <form action="">
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="phone" placeholder="Your Phone Number">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" rows="3" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn w-100" id="form-submit-btn">Send Message</button>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact end -->
+
+
+
+<script>
+    const form = document.querySelector('#login-index-form');
+    const btnText = document.querySelector('#login-form-text');
+    const spinner = document.querySelector('#login-form-spinner');
+    const submitBtn = document.querySelector('#form-submit-btn');
+
+    form.addEventListener('submit', (e)=>{
+        e.preventDefault()
+
+        spinner.classList.remove('d-none');
+        btnText.classList.add('d-none');
+        // submitBtn.style.backgroundColor = "green";
+        submitBtn.disabled = true;
+
+        form.submit();
+        
+    });
+</script>
+
+
+{% endblock %}

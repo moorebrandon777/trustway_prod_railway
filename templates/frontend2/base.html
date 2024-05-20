@@ -1,0 +1,40 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TRUSTWAY | The service you can rely on</title>
+
+    <!-- bootsrap css cdn -->
+    <link href="{% static 'frontend2/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custom css -->
+    <link href="{% static 'frontend2/assets/css/styles.css' %}" rel="stylesheet">
+  </head>
+  <body>
+
+    {% include './navbar.html' %}
+    {% block content %}{% endblock %}
+    {% include './footer.html' %}
+
+    <!-- bootstrap js cdn -->
+    <script src="{% static 'frontend2/assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- custom js -->
+    <script src="{% static 'frontend2/assets/js/app.js' %}"></script>
+
+    <!-- google translate -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+  </body>
+</html>

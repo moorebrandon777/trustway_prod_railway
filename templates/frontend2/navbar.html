@@ -1,0 +1,53 @@
+{% load static %}
+
+<!-- top nav start -->
+<nav class="top-nav">
+    <div class="nav-left">
+        <p><i class="fa-solid fa-location-dot"></i> 96 Ernser Vista Suite 437, NY, US <span>|</span></p> 
+        <p><i class="fa-solid fa-envelope"></i> contact@trustwayonlinetrans.com</p>
+    </div>
+    <div class="nav-right">
+        <div class="google-translatem">
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+</nav>
+<!-- top nav end -->
+
+<!-- navbar start -->
+<nav class="navbar navbar-expand-lg navbar-white bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="{% static 'frontend2/assets/images/logo.png' %}" alt="logo" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#all-biz">Business</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#all-biz">Personal</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'frontend:register' %}">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<!-- navbar end -->
