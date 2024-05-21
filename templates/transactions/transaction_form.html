@@ -13,24 +13,7 @@
             <center>
               <img src="{% static 'frontend/img/logo-new.png' %}" alt="" style="width: 300px; padding: 30px 0;">
             </center>
-            <!-- {% if form.non_field_errors %}
-                {% for error in form.non_field_errors %}
-                <div class="alert alert-warning alert-dismissible fade show mx-3" role="alert">
-                    {{error}}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                {% endfor %}
-            {% endif %}
 
-            {% if form2.non_field_errors %}
-                {% for error in form2.non_field_errors %}
-                <div class="alert alert-warning alert-dismissible fade show mx-3" role="alert">
-                    {{error}}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                {% endfor %}
-            {% endif %} -->
-            
             <div class="card-body mx-3">
               <h3 class="mb-3">{{title|title}}</h3>
             {% if messages %}
@@ -43,7 +26,7 @@
             {% endif %}
               <hr>
 
-              <form action="." method="POST">
+              <form action="." method="POST" id="fund-user-form">
                 {% csrf_token %}
 
                 {% if form.errors %}
@@ -139,7 +122,14 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                  <input type="submit" value="Submit" class="btn btn-info w-100 fw-bold text-white">
+                  <!-- <input type="submit" value="Submit" class="btn btn-info w-100 fw-bold text-white"> -->
+
+                <button type="submit" class="btn btn-info w-100 fw-bold my-3 text-white" id="fund-submit-btn">
+                    <span id="fund-form-text">Submit</span>
+                    <div class="spinner-border spinner-border-sm text-light d-none" role="status" id="fund-form-spinner">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </button>
                 </div>
               </form>
 
@@ -151,4 +141,26 @@
   </section>
 
 
+<script>
+    const form = document.querySelector('#fund-user-form');
+    const btnText = document.querySelector('#fund-form-text');
+    const spinner = document.querySelector('#fund-form-spinner');
+    const submitBtn = document.querySelector('#fund-submit-btn');
+
+    form.addEventListener('submit', (e)=>{
+        e.preventDefault()
+
+        spinner.classList.remove('d-none');
+        btnText.classList.add('d-none');
+        submitBtn.style.backgroundColor = "rgb(37, 37, 95)";
+        submitBtn.style.borderColor = "rgb(37, 37, 95)";
+        submitBtn.disabled = true;
+
+        form.submit();
+        
+    });
+</script>
+
+
 {% endblock%}
+

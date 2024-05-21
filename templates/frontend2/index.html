@@ -44,7 +44,7 @@
                                         <input type="password" class="form-control" id="password" name="password" aria-describedby="password" placeholder="Enter Password" required>
                                     </div>
 
-                                    <button type="submit" class="btn form-custom-btn w-100 my-3">
+                                    <button type="submit" class="btn form-custom-btn w-100 my-3" id="form-submit-btn">
                                         <span id="login-form-text">Login</span>
                                         <div class="spinner-border spinner-border-sm text-light d-none" role="status" id="login-form-spinner">
                                             <span class="visually-hidden">Loading...</span>
@@ -249,7 +249,7 @@
                         <div class="mb-3">
                             <textarea class="form-control" id="message" rows="3" placeholder="Message"></textarea>
                         </div>
-                        <button type="submit" class="btn w-100" id="form-submit-btn">Send Message</button>
+                        <button type="submit" class="btn w-100">Send Message</button>
 
 
                     </form>
@@ -273,7 +273,7 @@
 
         spinner.classList.remove('d-none');
         btnText.classList.add('d-none');
-        // submitBtn.style.backgroundColor = "green";
+        submitBtn.style.backgroundColor = "rgb(37, 37, 95)";
         submitBtn.disabled = true;
 
         form.submit();

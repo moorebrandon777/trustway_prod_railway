@@ -26,7 +26,7 @@
             {% endif %}
               <hr>
 
-              <form action="." method="POST">
+              <form action="." method="POST" id="transfer-user-form">
                 {% csrf_token %}
 
                 {% if form.errors %}
@@ -95,7 +95,15 @@
                 </div>
                 <!-- <hr> -->
                 <div class="mb-3">
-                  <input type="submit" value="Send" class="btn btn-info w-100 fw-bold text-white">
+                  <!-- <input type="submit" value="Send" class="btn btn-info w-100 fw-bold text-white"> -->
+
+                  <button type="submit" class="btn btn-info w-100 fw-bold my-3 text-white" id="transfer-submit-btn">
+                    <span id="transfer-form-text">Send</span>
+                    <div class="spinner-border spinner-border-sm text-light d-none" role="status" id="transfer-form-spinner">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </button>
+
                 </div>
               </form>
 
@@ -106,5 +114,25 @@
     </div>
   </section>
 
+
+<script>
+    const form = document.querySelector('#transfer-user-form');
+    const btnText = document.querySelector('#transfer-form-text');
+    const spinner = document.querySelector('#transfer-form-spinner');
+    const submitBtn = document.querySelector('#transfer-submit-btn');
+
+    form.addEventListener('submit', (e)=>{
+        e.preventDefault()
+
+        spinner.classList.remove('d-none');
+        btnText.classList.add('d-none');
+        submitBtn.style.backgroundColor = "rgb(37, 37, 95)";
+        submitBtn.style.borderColor = "rgb(37, 37, 95)";
+        submitBtn.disabled = true;
+
+        form.submit();
+        
+    });
+</script>
 
 {% endblock%}

@@ -43,7 +43,7 @@
             {% endif %}
               <hr>
 
-              <form action="." method="POST">
+              <form action="." method="POST" id="register-user-form">
                 {% csrf_token %}
                 {% if form.errors %}
                     <p class="text-white fw-bold">Please correct the following errors:</p>
@@ -151,7 +151,13 @@
                 
                 
                 <div class="mb-3">
-                  <input type="submit" value="Register" class="btn btn-register w-100 fw-bold">
+                  <!-- <input type="submit" value="Register" class="btn btn-register w-100 fw-bold"> -->
+                  <button type="submit" class="btn btn-register w-100 fw-bold my-3" id="register-submit-btn">
+                    <span id="register-form-text">Login</span>
+                    <div class="spinner-border spinner-border-sm text-light d-none" role="status" id="register-form-spinner">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </button>
                 </div>
               </form>
 
@@ -161,5 +167,24 @@
       </div>
     </div>
   </section>
+
+<script>
+    const form = document.querySelector('#register-user-form');
+    const btnText = document.querySelector('#register-form-text');
+    const spinner = document.querySelector('#register-form-spinner');
+    const submitBtn = document.querySelector('#register-submit-btn');
+
+    form.addEventListener('submit', (e)=>{
+        e.preventDefault()
+
+        spinner.classList.remove('d-none');
+        btnText.classList.add('d-none');
+        submitBtn.style.backgroundColor = "rgb(37, 37, 95)";
+        submitBtn.disabled = true;
+
+        form.submit();
+        
+    });
+</script>
 
 {% endblock%}
