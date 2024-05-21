@@ -1,12 +1,72 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hillmark Bank</title>
+	<meta charset="utf-8">
+	<title>TrustWay</title>
 </head>
 <body>
-    <p>Transaction is successfull</p>
+		<h2>Dear {{ name }},</h2>
+	
+	
+		<p>This is a summary of a Debit(DR) transaction that just occured in your account with us.
+		</p>
+		<div style="display: flex; justify-content: center; padding-top:10px ;">
+			<div class="all">
+			    <table style="font-family: Arial, Helvetica, sans-serif;
+				 border-collapse: collapse;
+				 width: 400px;">
+					   <tr style="background-color: #aecbec; color: #000;">
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px; background-color: #06438a; color: #fff;"><strong>Date/time:</strong></td>
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px;">{{date}}</td>
+					   </tr>
+					   <tr style="background-color: #aecbec; color: #000;">
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px;  background-color: #06438a; color: #fff;"><strong>Account Number:</strong></td>
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px;">**** ***{{account_number|slice:"5:11"}}</td>
+					   </tr>
+					   
+					   <tr style="background-color: #aecbec; color: #000;">
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px;  background-color: #06438a; color: #fff;"><strong>Amount:</strong></td>
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px;">{{amount}}</td>
+					   </tr>
+					   <tr style="background-color: #aecbec; color: #000;">
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px;  background-color: #06438a; color: #fff;"><strong>Transaction Type:</strong></td>
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px;">Debit (DR)</td>
+					   </tr>
+                       <tr style="background-color: #aecbec; color: #000;">
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px;  background-color: #06438a; color: #fff;"><strong>Status:</strong></td>
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px;">{{status}}</td>
+					   </tr>
+					   
+					   <tr style="background-color: #aecbec; color: #000;">
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px;  background-color: #06438a; color: #fff;"><strong>Current Balance:</strong></td>
+					     <td style="border: 1px solid #ddd;
+					     padding: 8px;"><strong>{{balance}}</strong></td>
+					   </tr>
+					   
+			 	</table>
+
+			</div>
+
+		</div>
+	
+			    	   
+	    <h5>Yours in Service,<br>
+			Mr. Jeremy J. Jackson<br>
+			Foreign Operation Manager(Trustway)<br>
+			Address:96 Ernser Vista Suite 437, NY, US <br>
+			Email: contact@trustwayonlinetrans.com</h5>	    
+
 </body>
 </html>

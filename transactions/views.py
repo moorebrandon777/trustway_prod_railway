@@ -169,6 +169,7 @@ class CustomerWithdrawMoneyView(CustomerTransactionCreateMixin):
                                 'account_number':data.beneficiary_account,
                                 'amount':f'{data.amount} {data.account.currency}',
                                 'balance':f'{data.balance_after_transaction} {data.account.currency}',
+                                'status': data.status,
                             })
                     try:
                         emailsend.email_send('Transaction Successful', message, self.request.user.email)

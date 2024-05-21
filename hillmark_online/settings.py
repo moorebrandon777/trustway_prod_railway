@@ -152,11 +152,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.privateemail.com'
+EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_PORT = 465
 # EMAIL_PORT = 587
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-DEFAULT_FROM_EMAIL = 'Hillmark Bnk <customerservice@hmb-online.com>'
+DEFAULT_FROM_EMAIL = 'TrustWay <contact@trustwayonlinetrans.com>'
