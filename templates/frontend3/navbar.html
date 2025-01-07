@@ -1,0 +1,171 @@
+{% load static%}
+
+<header class="main-header main-header-style1">
+  <!--Start Main Header Style1 Top-->
+  <div class="main-header-style1-top">
+    <div class="auto-container">
+      <div class="outer-box">
+        <!--Start Main Header Style1 Top Left-->
+        <div class="main-header-style1-top__left">
+          <div class="looking-banking-box">
+            <div class="inner-title">
+              <!-- <span class="icon-binoculars"></span> -->
+              <span class="">
+                <i class="fa-solid fa-binoculars"></i>
+              </span>
+              <p>Looking</p>
+            </div>
+            <div class="select-box clearfix">
+              <select class="wide">
+                <option data-display="Personal Banking">
+                  Personal Banking
+                </option>
+                <option value="1">Business Banking</option>
+              </select>
+            </div>
+          </div>
+          <div class="nearest-branch">
+            <span class="">
+              <i class="fa-solid fa-location-dot"></i>
+            </span>
+            <a href="/">Find Nearest Branch</a>
+          </div>
+        </div>
+        <!--End Main Header Style1 Top Left-->
+
+        <!--Start Main Header Style1 Top Right-->
+        <div class="main-header-style1-top__right">
+          <div class="header-menu-style1">
+            <ul>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#faq-neph">Faq's</a></li>
+              <!-- <li><a href="#">Offers</a></li>
+              <li><a href="#">Calendar</a></li> -->
+              <li><div id="google_translate_element"></div></li>
+            </ul>
+          </div>
+          <!-- <div class="box-search-style1">
+              <a href="/" class="search-toggler">
+                <span class="fa-solid fa-magnifying-glass"></span>
+                Search
+              </a>
+            </div> -->
+          <!-- <div class="language-switcher">
+            
+            <div id="polyglotLanguageSwitcher">
+              <form action="#">
+                <select id="polyglot-language-options">
+                  <option id="en" value="en" selected>English</option>
+                  <option id="fr" value="fr">French</option>
+                  <option id="de" value="de">German</option>
+                  <option id="it" value="it">Italian</option>
+                  <option id="es" value="es">Spanish</option>
+                </select>
+              </form>
+            </div>
+          </div> -->
+        </div>
+        <!--End Main Header Style1 Top Right-->
+      </div>
+    </div>
+  </div>
+  <!--End Main Header Style1 Top-->
+
+  <nav class="main-menu main-menu-style1">
+    <div class="main-menu__wrapper clearfix">
+      <div class="container">
+        <div class="main-menu__wrapper-inner">
+          <div class="main-menu-style1-left">
+            <div class="logo-box-style1">
+              <a href="/">
+                <!-- <img
+                  src="{% static 'assets/images/mylogo/logome1.png' %}"
+                  alt="Awesome Logo"
+                  title=""
+                  style="width: 170px"
+                /> -->
+                <img
+                  src="{% static 'frontend2/assets/images/logo.png' %}"
+                  alt="Awesome Logo"
+                  title=""
+                  style="width: 170px"
+                />
+                
+              </a>
+            </div>
+
+            <div class="main-menu-box">
+              <a href="#" class="mobile-nav__toggler">
+                <!-- <i class="icon-menu"></i> -->
+                <i class="fa-solid fa-bars"></i>
+              </a>
+
+              <ul class="main-menu__list">
+                <li class="megamenu">
+                  <a href="/">Home</a>
+                </li>
+
+                <li class="">
+                  <a href="#service_neph">Services</a>
+                </li>
+
+                <li class="">
+                  <a href="#feature-neph">About</a>
+                </li>
+                <li class="">
+                  <a href="#faq-neph">News</a>
+                </li>
+                <li class="">
+                  <a href="{% url 'frontend:register' %}">Create Account</a>
+                </li>
+                <li>
+                  <a href="{% url 'frontend:login' %}">Sign In</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="main-menu-style1-right">
+            <div class="header-btn-one">
+              <a href="#"> <span class="icon-home-button"></span>Login </a>
+              <a class="style2" href="#">
+                <span class="icon-payment"></span>Open an Account
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!--Start Main Header Style1 Bottom-->
+  <div class="main-header-style1-bottom">
+    <div class="auto-container">
+      <div class="outer-box">
+        <div class="update-box">
+          <div class="inner-title">
+            <span class="fa-solid fa-bullhorn"></span>
+            <h4>Updates:</h4>
+          </div>
+          <div class="text">
+            <p>Get upto 4%* on our Savings Account Balances with TrustWay.</p>
+            <!-- <a href="#"><span class="icon-chevron"></span>More Details</a> -->
+          </div>
+        </div>
+        <div class="slogan-box">
+          <p>
+            Dear Customer, We have launched Video KYC facility for New customer
+            to open savings ac
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Main Header Style1 Bottom-->
+</header>
+
+<div class="stricky-header stricked-menu main-menu">
+  <div class="sticky-header__content"></div>
+  <!-- /.sticky-header__content -->
+</div>
+<!-- /.stricky-header -->

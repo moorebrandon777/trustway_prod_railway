@@ -1,0 +1,279 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrustWay || A service you can trust</title>
+    <!-- Favicons Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'assets/images/favicons/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'assets/images/favicons/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'assets/images/favicons/favicon-16x16.png' %}"
+    />
+    <link
+      rel="manifest"
+      href="{% static 'assets/images/favicons/site.webmanifest' %}"
+    />
+    <!-- <meta name="description" content="Finbank HTML 5 Template " /> -->
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/animate/animate.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/animate/custom-animate.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/bootstrap/css/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/bxslider/jquery.bxslider.css' %}"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/fontawesome/css/all.min.css' %}"
+    /> -->
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/jquery-ui/jquery-ui.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/nice-select/nice-select.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/odometer/odometer.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/owl-carousel/owl.carousel.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/owl-carousel/owl.theme.default.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/swiper/swiper.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/vegas/vegas.min.css' %}"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/thm-icons/style.css' %}"
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@icon/themify-icons@1.0.1-alpha.3/themify-icons.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendors/language-switcher/polyglot-language-switcher.css' %}"
+    />
+    <!-- Module css -->
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/module-css/01-header-section.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/module-css/02-banner-section.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/module-css/03-about-section.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/module-css/04-fact-counter-section.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/module-css/05-testimonial-section.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/module-css/06-partner-section.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/module-css/07-footer-section.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/module-css/08-blog-section.css' %}"
+    />
+
+    <!-- Template styles -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+
+
+    <style>
+      /* google translate */
+
+#google_translate_element {
+    color: transparent;
+}
+
+#google_translate_element a {
+    display: none;
+}
+
+div.goog-te-gadget {
+    color: transparent !important;
+}
+
+select.google_translate_element {
+    color: black;
+}
+
+/* google transalte end */
+    </style>
+  </head>
+
+  <body>
+    <!-- Start preloader -->
+    <div class="loader-wrap">
+      <div class="preloader">
+        <div class="preloader-close">x</div>
+        <div id="handle-preloader" class="handle-preloader">
+          <div class="animation-preloader">
+            <div class="spinner"></div>
+            <div class="txt-loading">
+              <span data-text-preloader="t" class="letters-loading"> t </span>
+              <span data-text-preloader="r" class="letters-loading"> r </span>
+              <span data-text-preloader="u" class="letters-loading"> u </span>
+              <span data-text-preloader="s" class="letters-loading"> s </span>
+              <span data-text-preloader="t" class="letters-loading"> t </span>
+              <span data-text-preloader="w" class="letters-loading"> w </span>
+              <span data-text-preloader="a" class="letters-loading"> a </span>
+              <span data-text-preloader="y" class="letters-loading"> y </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End preloader -->
+
+    <!-- content start -->
+    <div class="page-wrapper">
+      {% include './navbar.html' %} 
+      {% block content %} {% endblock %} 
+      {% include './footer.html' %}
+    </div>
+    <!-- contents end -->
+
+    <!-- mobile-nav start -->
+    <div class="mobile-nav__wrapper">
+      <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+      <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler">
+          <i class="fas fa-plus"></i>
+        </span>
+        <div class="logo-box">
+          <a href="index.html" aria-label="logo image">
+            <img
+              src="{% static 'frontend2/assets/images/logo.png' %}"
+              alt=""
+              style="width: 150px"
+            />
+          </a>
+        </div>
+        <div class="mobile-nav__container"></div>
+        <ul class="mobile-nav__contact list-unstyled">
+          <li>
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:info@example.com">contact@trustwayonlinetrans.com</a>
+          </li>
+          <!-- <li>
+              <i class="fa fa-phone-alt"></i>
+              <a href="tel:123456789">444 000 777 66</a>
+            </li> -->
+        </ul>
+      </div>
+    </div>
+    <!-- mobile nav end -->
+
+    <!-- arrow to top -->
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+      <!-- <i class="icon-chevron"></i> -->
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+    <!-- end arrow to top -->
+
+    <script src="{% static 'assets/vendors/jquery/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/bxslider/jquery.bxslider.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/circleType/jquery.circleType.js' %}"></script>
+    <script src="{% static 'assets/vendors/circleType/jquery.lettering.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/isotope/isotope.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-appear/jquery.appear.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-migrate/jquery-migrate.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-ui/jquery-ui.js' %}"></script>
+    <script src="{% static 'assets/vendors/jquery-validate/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/nice-select/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/odometer/odometer.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/swiper/swiper.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/vegas/vegas.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/wnumb/wNumb.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/wow/wow.js' %}"></script>
+    <script src="{% static 'assets/vendors/extra-scripts/jquery.paroller.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/language-switcher/jquery.polyglot.language.switcher.js' %}"></script>
+
+    <!-- Template js -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <!-- google translate -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+  </body>
+</html>

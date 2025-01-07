@@ -1,0 +1,73 @@
+{% extends './base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-5">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="text-danger text-center">Login</h3>
+                    {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{message}}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                    <hr>
+                    <form action="." method="POST" id="login-form">
+
+                        {% csrf_token %}
+                
+                        {% for field in form %}  
+                            {{ field.label_tag }} 
+                                {{ field }}
+                                {% if field.errors %}
+                                <small>{{ field.errors|striptags }}</small> 
+                            {% endif %}
+                        {% endfor %}
+                        <div class="mb-3">
+                            
+                            <button type="submit" id="login-btn" class="btn btn-danger w-100 fw-bold">
+                                <span id="login-btn-text">Login</span>
+                                <div class="spinner-border text-light spinner-border-sm d-none" role="status" id="login-btn-spinner">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </button>
+                        </div>
+
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- slogan area start -->
+{% include './includes/slogan.html' %}
+<!-- slogan area end -->
+
+
+<script>
+    const form = document.querySelector('#login-form');
+    const loginBtn = document.querySelector('#login-btn');
+    const btnSpinner = document.querySelector('#login-btn-spinner');
+    const btnText = document.querySelector('#login-btn-text');
+
+    form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        console.log('clicked');
+
+        loginBtn.style.backgroundColor = '#e88087';
+        loginBtn.style.borderColor = '#e88087';
+        btnText.style.display = 'none';
+        btnSpinner.classList.remove('d-none');
+
+        form.submit();
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,350 @@
+{% extends './base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!--Main Slider Start-->
+<section class="main-slider main-slider-style1">
+    <div
+      class="swiper-container thm-swiper__slider"
+      data-swiper-options='{"slidesPerView": 1, "loop": true,
+            "effect": "fade",
+            "pagination": {
+            "el": "#main-slider-pagination",
+            "type": "bullets",
+            "clickable": true
+            },
+            "navigation": {
+            "nextEl": "#main-slider__swiper-button-next",
+            "prevEl": "#main-slider__swiper-button-prev"
+            },
+            "autoplay": {
+            "delay": 5000
+            }}'
+    >
+      <div class="swiper-wrapper">
+        <div class="slider-buttom-box">
+          <a class="style2" href="#"
+            >Make Payment <span class="fa-solid fa-circle-play"></span
+          ></a>
+          <a href="#"
+            >Make an Enquiry <span class="fa-solid fa-circle-play"></span
+          ></a>
+        </div>
+
+        <!--Start Single Swiper Slide-->
+        <div class="swiper-slide">
+          <div
+            class="image-layer"
+            style="
+              background-image: url(/static/assets/images/slides/slide-v1-1.jpg);
+            "
+          ></div>
+          <div
+            class="main-slider-style1__shape1"
+            style="
+              background-image: url(/static/assets/images/shapes/slider-1-shape-1.png);
+            "
+          ></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="main-slider-content">
+                  <div class="main-slider-content__inner">
+                    <div class="big-title">
+                      <h2>
+                        Bank with the<br />
+                        Happiest Customers<br />
+                        in the World
+                      </h2>
+                    </div>
+                    <div class="text">
+                      <p>
+                        On the other hand, we denounce with righteous
+                        indignation<br />
+                        and dislike men who are so beguiled.
+                      </p>
+                    </div>
+                    <div class="btns-box">
+                      <a class="btn-one" href="{% url 'frontend:register' %}">
+                        <span class="txt"> Get Started Now </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Single Swiper Slide-->
+
+        <!--Start Single Swiper Slide-->
+        <div class="swiper-slide">
+          <div
+            class="image-layer"
+            style="
+              background-image: url(/static/assets/images/slides/slide-v1-2.jpg);
+            "
+          ></div>
+          <div
+            class="main-slider-style1__shape1"
+            style="
+              background-image: url(/static/assets/images/shapes/slider-1-shape-1.png);
+            "
+          ></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="main-slider-content">
+                  <div class="main-slider-content__inner">
+                    <div class="big-title">
+                      <h2>
+                        Banking Made<br />
+                        Easy, More Secure &<br />
+                        More Personal
+                      </h2>
+                    </div>
+                    <div class="text">
+                      <p>
+                        Their duty through weakness of will, which is the
+                        same as<br />
+                        saying through shrinking from toil.
+                      </p>
+                    </div>
+                    <div class="btns-box">
+                      <a class="btn-one" href="{% url 'frontend:register' %}">
+                        <span class="txt"> Make an Appointment </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Single Swiper Slide-->
+
+        <!--Start Single Swiper Slide-->
+        <div class="swiper-slide">
+          <div
+            class="image-layer"
+            style="
+              background-image: url(/static/assets/images/slides/slide-v1-3.jpg);
+            "
+          ></div>
+          <div
+            class="main-slider-style1__shape1"
+            style="
+              background-image: url(/static/assets/images/shapes/slider-1-shape-1.png);
+            "
+          ></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="main-slider-content">
+                  <div class="main-slider-content__inner">
+                    <div class="big-title">
+                      <h2>
+                        An Innovative<br />
+                        Framework for Your<br />
+                        Financial solutions
+                      </h2>
+                    </div>
+                    <div class="text">
+                      <p>
+                        Their duty through weakness of will, which is the
+                        same as<br />
+                        saying through shrinking from toil.
+                      </p>
+                    </div>
+                    <div class="btns-box">
+                      <a class="btn-one" href="{% url 'frontend:register' %}">
+                        <span class="txt"> Make an Appointment </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Single Swiper Slide-->
+      </div>
+
+      <!-- If we need navigation buttons -->
+      <div class="main-slider__nav">
+        <div
+          class="swiper-button-prev"
+          id="main-slider__swiper-button-next"
+        >
+          <!-- <i class="icon-chevron left"></i> -->
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div
+          class="swiper-button-next"
+          id="main-slider__swiper-button-prev"
+        >
+        <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Main Slider End-->
+
+
+  <!--Start Features Style1 Area-->
+  <section class="features-style1-area" id="feature_neph">
+    <div class="container">
+      <div class="sec-title text-center">
+        <h2>Service for a Better Tomorrow</h2>
+        <div class="sub-title">
+          <p>Committed to helping our customers succeed.</p>
+        </div>
+      </div>
+      <div class="features-style1-content">
+        <ul class="clearfix">
+          <!--Start Single Features Style1 Box-->
+          <li>
+            <div class="single-features-style1-box">
+              <div class="shape-left">
+                <img src="{% static 'assets/images/shapes/shape-1.png' %}" alt="" />
+              </div>
+              <div class="shape-bottom">
+                <img src="{% static 'assets/images/shapes/shape-2.png' %}" alt="" />
+              </div>
+              <div class="counting-box">
+                <div
+                  class="counting-box-bg"
+                  style="
+                    background-image: url(/static/assets/images/shapes/counting-box-bg.png);
+                  "
+                ></div>
+                <h3>01</h3>
+              </div>
+              <div class="text-box">
+                <h4>Fixed Depost</h4>
+                <h3>Fixed Returns with Peace of Mind</h3>
+                <p>
+                  Must explain to you how work mistaken give you complete
+                  guide.
+                </p>
+                <div class="btn-box">
+                  <a href="#">
+                    Read More
+                    <i class="fas fa-plus"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!--End Single Features Style1 Box-->
+          <!--Start Single Features Style1 Box-->
+          <li>
+            <div class="single-features-style1-box">
+              <div class="shape-left">
+                <img src="{% static 'assets/images/shapes/shape-1.png' %}" alt="" />
+              </div>
+              <div class="shape-bottom">
+                <img src="{% static 'assets/images/shapes/shape-2.png' %}" alt="" />
+              </div>
+              <div class="counting-box">
+                <div
+                  class="counting-box-bg"
+                  style="
+                    background-image: url(/static/assets/images/shapes/counting-box-bg.png);
+                  "
+                ></div>
+                <h3>02</h3>
+              </div>
+              <div class="text-box">
+                <h4>Current Account</h4>
+                <h3>Best Solutions for a Business</h3>
+                <p>
+                  No one rejects dislikes avoids pleasures because it is
+                  pleasure trivial.
+                </p>
+                <div class="btn-box">
+                  <a href="#">
+                    Read More
+                    <i class="fas fa-plus"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!--End Single Features Style1 Box-->
+          <!--Start Single Features Style1 Box-->
+          <li>
+            <div class="single-features-style1-box">
+              <div class="shape-left">
+                <img src="{% static 'assets/images/shapes/shape-1.png' %}" alt="" />
+              </div>
+              <div class="shape-bottom">
+                <img src="{% static 'assets/images/shapes/shape-2.png' %}" alt="" />
+              </div>
+              <div class="counting-box">
+                <div
+                  class="counting-box-bg"
+                  style="
+                    background-image: url(/static/assets/images/shapes/counting-box-bg.png);
+                  "
+                ></div>
+                <h3>03</h3>
+              </div>
+              <div class="text-box">
+                <h4>Mutual Funds</h4>
+                <h3>Our Strategies for Better Returns</h3>
+                <p>
+                  Except obtain some advantages from it But who has any
+                  right to find enjoy.
+                </p>
+                <div class="btn-box">
+                  <a href="#">
+                    Read More
+                    <i class="fas fa-plus"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!--End Single Features Style1 Box-->
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--End Features Style1 Area-->
+
+  <!-- service style -->
+   {% include './includes/service.html' %}
+   <!-- end service style -->
+
+   <!-- wealth secure area -->
+   {% include './includes/wealth_secure.html' %}
+    <!-- wealth secure area end -->
+
+    <!-- emergency service start -->
+     <!-- emergency service end -->
+
+     <!-- feature3 start -->
+     {% include './includes/feature3.html' %}
+      <!-- feature 3 end -->
+
+      <!-- exchange rate -->
+      {% include './includes/exchange.html' %}
+       <!-- exchange rate end -->
+
+       <!-- faq start -->
+       {% include './includes/faq.html' %}
+        <!-- faq end -->
+
+        <!-- deals start -->
+        {% include './includes/deal.html' %}
+         <!-- deals end -->
+
+         <!-- slogan area start -->
+         {% include './includes/slogan.html' %}
+          <!-- slogan area end -->
+
+
+{% endblock %}

@@ -16,7 +16,8 @@ from account.forms import UserLoginForm, UserRegisterForm, UserBankAccountForm
 from transactions import emailsend
 
 class HomeView(TemplateView):
-    template_name = 'frontend2/index.html'
+    template_name = 'frontend3/index.html'
+    # template_name = 'frontend2/index.html'
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
@@ -78,7 +79,8 @@ class ContactUsView(TemplateView):
 
 class RegisterUserView(CreateView):
     redirect_authenticated_user = True
-    template_name = 'frontend2/register.html'
+    template_name = 'frontend3/register.html'
+    # template_name = 'frontend2/register.html'
     model = CustomUser
     form_class = UserRegisterForm
 
@@ -113,7 +115,8 @@ class RegisterUserView(CreateView):
 class LoginUserView(LoginView):
     redirect_authenticated_user = True
     form_class = UserLoginForm
-    template_name = 'frontend2/index.html'
+    template_name = 'frontend3/login.html'
+    # template_name = 'frontend2/index.html'
 
     def get_success_url(self):
         if self.request.user.is_staff:

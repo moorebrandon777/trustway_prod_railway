@@ -1,0 +1,138 @@
+{% load static %}
+
+<style>
+  .my_logo_footer {
+    width: 200px;
+  }
+</style>
+<!--Start footer area -->
+<footer class="footer-area">
+  <div class="right-shape">
+    <img
+      src="{% static 'assets/images/shapes/footer-right-shape.png' %}"
+      alt=""
+    />
+  </div>
+
+  <!--Start Footer-->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <!--Start single footer widget-->
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+          <div class="single-footer-widget marbtm50">
+            <div class="our-company-info">
+              <div class="footer-logo-style1">
+                <a href="index.html">
+                  <img
+                    src="{% static 'frontend2/assets/images/logo.png' %}"
+                    alt="Awesome Logo"
+                    title=""
+                    class="my_logo_footer"
+                  />
+                  <!-- <img
+                      src="{% static 'assets/images/footer/footer-logo-1.png' %}"
+                      alt="Awesome Logo"
+                      title=""
+                    /> -->
+                </a>
+              </div>
+              <div class="copyright-text">
+                <p>
+                  Copyright &copy; 2022
+                  <a href="/">TrustWay International.</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End single footer widget-->
+
+        <!--Start single footer widget-->
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+          <div class="single-footer-widget marbtm50">
+            <div class="footer-widget-contact-info">
+              <ul>
+                <li>
+                  <h3>
+                    <a href="contact@trustwayonlinetrans.com">contact@trustwayonlinetrans.com</a>
+                  </h3>
+                  <p>Customer Care</p>
+                </li>
+                <li>
+                  <h3>Mon - Fri: 9.00am to 5.00pm</h3>
+                  <p>Banking Hours</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--End single footer widget-->
+
+        <!--Start single footer widget-->
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+          <div class="single-footer-widget">
+            <div class="single-footer-widget-right-colum">
+              <ul>
+                <li>
+                  <a href="{% url 'frontend:login' %}">
+                    Download Forms
+                    <span class="fa-solid fa-download"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'frontend:login' %}">
+                    Register Your Complaint
+                    <span class="fa-regular fa-comment"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--End single footer widget-->
+      </div>
+    </div>
+  </div>
+  <!--End Footer-->
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="bottom-inner">
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Online Security Tips</a></li>
+          </ul>
+        </div>
+        <!-- <div class="footer-social-link">
+            <ul class="clearfix">
+              <li>
+                <a href="#">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+      </div>
+    </div>
+  </div>
+</footer>
+<!--End footer area-->
